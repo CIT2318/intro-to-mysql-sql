@@ -4,8 +4,7 @@
 
 You already have a database set up for you (it's named after your student number). You only have access to this one database. 
 * Open a web browser, open https://selene.hud.ac.uk/phpmyadmin/
-* En
-* ter the same username and password that you used for FTP-ing
+* Enter the same username and password that you used for FTP-ing
 * Once logged in, on the left-hand side you will see your available database. 
 * Click on it (its named with your student number).
 * Skip down these instructions to 'Creating Tables'
