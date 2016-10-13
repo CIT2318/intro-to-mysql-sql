@@ -49,7 +49,7 @@ CREATE TABLE films (
 ##Inserting Data
 * Click on the SQL tab, paste in the following:
 ```SQL
-INSERT INTO films VALUES (NULL, 'Jaws', 1975, 124)
+INSERT INTO films (id, title, year, duration) VALUES (NULL, 'Jaws', 1975, 124)
 ```
 * Click 'browse' you should be able to see the row in the database table
 * Click on the SQL tab. 
@@ -59,7 +59,7 @@ INSERT INTO films VALUES (NULL, 'Jaws', 1975, 124)
 * We are going to need a few more films
 * Click on the SQL tab. Paste in the following:
 ```SQL
-INSERT INTO films VALUES
+INSERT INTO films (id, title, year, duration) VALUES  
 (NULL, 'Winter''s Bone', 2010, 100),
 (NULL, 'Do The Right Thing', 1989, 120),
 (NULL, 'Mean Girls', 2004, 97),
