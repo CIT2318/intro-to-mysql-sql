@@ -59,17 +59,22 @@ INSERT INTO films (id, title, year, duration) VALUES (NULL, 'Jaws', 1975, 124)
 * We are going to need a few more films
 * Click on the SQL tab. Paste in the following:
 ```SQL
-INSERT INTO films (id, title, year, duration) VALUES  
-(NULL, 'Winter''s Bone', 2010, 100),
+INSERT INTO `films` (`id`, `title`, `year`, `duration`) VALUES
+(NULL, 'Winter\'s Bone', 2010, 100),
 (NULL, 'Do The Right Thing', 1989, 120),
-(NULL, 'Mean Girls', 2004, 97),
-(NULL, 'The Godfather', 1972, 177),
-(NULL, 'Spirited Away', 2001, 124),
-(NULL, 'The Thing', 1982, 109),
 (NULL, 'The Incredibles', 2004, 115),
+(NULL, 'The Godfather', 1972, 177),
 (NULL, 'Dangerous Minds', 1995, 99),
-(NULL, 'Inception', 2004, 108),
-(NULL, 'Donnie Darko', 2001, 113);
+(NULL, 'Spirited Away', 2001, 124),
+(NULL, 'Moonlight', 2016, 111),
+(NULL, 'Life of PI', 2012, 127),
+(NULL, 'Gravity', 2013, 91),
+(NULL, 'Arrival', 2016, 116),
+(NULL, 'Wonder Woman', 2017, 141),
+(NULL, 'Mean Girls', 2004, 97),
+(NULL, 'Inception', 2010, 108),
+(NULL, 'Donnie Darko', 2001, 113),
+(NULL, 'Get Out', 2017, 117);
 ```
 * Click 'go'
 * Select browse to make sure the import worked.
