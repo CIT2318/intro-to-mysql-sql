@@ -4,7 +4,9 @@
 
 You already have a database set up for you (it's named after your student number). You only have access to this one database.
 * Open a web browser, open https://selene.hud.ac.uk/phpmyadmin/
-* Enter the same username and password that you used for FTP-ing
+* Enter your
+    * username e.g. u0123456
+    * password. This should be your date of birth in the form two digits for the day, three letters for the month, and two digits for the year. An example would be **01jan98**.
 * Once logged in, on the left-hand side you will see your available database.
 * Click on it (its named with your student number).
 * Skip down these instructions to 'Creating Tables'
@@ -41,7 +43,7 @@ CREATE TABLE films (
   CONSTRAINT PRIMARY KEY (id)  
 )
 ```
-* Refer back to the slides for an explanation of the SQL statement
+* Refer back to the notes for an explanation of the SQL statement
 * Click 'Go'
 * A 'films' table should be created
 * Select the table and click 'structure' to check the table you have created
@@ -84,7 +86,7 @@ INSERT INTO `films` (`id`, `title`, `year`, `duration`) VALUES
 SELECT * FROM films WHERE title="Inception"
 ```
 * Click 'go'. You should see the results of the query.
-* Write SELECT statements that will do the following:
+* Write SELECT statements that will do the following. Refer to the notes for similar examples/advice. 
   * List all the films that were made in 2004
   * List all the films  with a duration of 100 minutes or greater
   * List these films in order, from the longest to the shortest
