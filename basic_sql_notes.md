@@ -6,6 +6,7 @@ We use a language called SQL (Structured Query Language) to issue commands to th
 * Using a visual web interface - phpmyadmin
 
 ## Creating Tables
+Here's an empty database table anmed *students*.
 
 | id | last_name | first_name | course | mark |
 |----|-----------|------------|--------|------|
@@ -41,19 +42,19 @@ CONSTRAINT PRIMARY KEY (id)
 * Next comes the name we give the table, in this case *students*
     * Name all tables and columns in lower case (some RDBMS are case-sensitive)
 * Then comes a set of brackets
-* The individual columns are defined inside these brackets e.g. the column named *id*
+* The individual columns are defined inside these brackets e.g. the *id* is defined by the following SQL snippet.
 
 ```sql
 id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 ```
 * The name of the column is followed by the type of data the column will contain and the size of the column data (in this example INT).
 * UNSIGNED means we only allow positive integers.
-* NOT NULL means every row must have an id value.
+* NOT NULL means every row must have a value for this column.
 * AUTO_INCREMENT. When we insert data, if we leave this field blank MySQL will automatically generate a unique number. Each id value needs to unique because it is the primary key.
 
-The other columns follow a similar pattern but with different datat types.
+The other columns follow a similar pattern but with different data types.
 
-At the end fo the CREATE TABLE statement we specify the id column is the primary key:
+At the end of the CREATE TABLE statement we specify the id column is the primary key:
 ```sql
 CONSTRAINT  PRIMARY KEY (id)
 ```
@@ -71,9 +72,10 @@ INSERT INTO students (id, last_name, first_name, course, mark)
 VALUES (NULL , 'Compton', 'Jane', 'IT', 58);
 ```
 Would result in a table that looks like:
+
 | id      | last_name     | first_name | course    | mark     |
 |---------|---------------|------------|-----------|----------|
-|    1    |    Compton    |    Jane    |    IT    |    58    |
+|    1    |    Compton    |    Jane    |    IT     |    58    |
 |         |               |            |           |          |
 |         |               |            |           |          |
 
@@ -92,6 +94,7 @@ VALUES
 (NULL, 'Crowe', 'Grace', 'Computing', '70');
 ```
 Would change my table to look like the following:
+
 | id      | last_name      | first_name   | course                        | mark     |
 |---------|----------------|--------------|-------------------------------|----------|
 |    1    |    Compton     |    Jane      |    IT                        |    58    |
@@ -118,10 +121,10 @@ This would return a result set that looks like:
 |    Laxman      |    Sunil     |
 |    Crowe       |    Grace     |
 
-We specify which columns we want to include in the output (in this case first_name and last_name)
+We specify which columns we want to include in the output (in this case *first_name* and *last_name*)
 
 ### Selecting everything
-We use an asterix (*) to select all columns e.g.
+We use an asterix (\*) to select all columns e.g.
 ```sql
 SELECT * FROM students
 ```
@@ -159,8 +162,7 @@ There are two students on the IT course, but IT only appears once in the returne
 We can choose to retrieve specific rows using a WHERE clause e.g. I want to know the names of all the students on the IT course.
 
 ```sql
-SELECT first_name, last_name FROM students
-WHERE course="IT"
+SELECT first_name, last_name FROM students WHERE course="IT"
 ```
 Would return
 
@@ -270,7 +272,7 @@ SELECT * FROM students ORDER BY mark DESC
 |    2    |    Atherton    |    Ian       |    Computing   in Business    |    32    |
 
 ### The SELECT Statement - LIMIT and OFFSET
-We can limit the number of returned results. This is useful if we have a very large table or if we doing pagination. In the following example only the first three results are returned.
+We can limit the number of returned results. This is useful if we have a very large table or if we are doing pagination. In the following example only the first three results are returned.
 
 ```sql
 SELECT * FROM students
@@ -357,7 +359,7 @@ LIMIT 1
 ## Updating Records
 Imagine Ian Atherton has transferred course from Computing in Business to IT. Using the UPDATE statement we can change the value of the course field.
 ```sql
-UPDATE students SET course= 'IT' WHERE id =2
+UPDATE students SET course= 'IT' WHERE id = 2
 ```
 | id      | last_name      | first_name   | course                        | mark     |
 |---------|----------------|--------------|-------------------------------|----------|
